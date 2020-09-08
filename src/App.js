@@ -17,7 +17,11 @@ function App() {
         <Router>
           <Switch>
             <div className="padding">
-              <Route exact path="/" component={Container_Main} />
+              <Route
+                exact
+                path="jonathanlgeorge.github.io/frontend_flags/"
+                component={Container_Main}
+              />
               <Route exact path="/country/:id" component={Country_Page} />
             </div>
           </Switch>

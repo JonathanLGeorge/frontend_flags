@@ -3,7 +3,6 @@ import React, { createContext, useState, useEffect } from "react";
 export const GetCountryInfo = createContext();
 
 export default function CountryContextProvider(props) {
-  const [loading, setLoading] = useState(true);
   const [countries, setCountries] = useState([]);
   const [countryNames, setCountryName] = useState([]);
 
@@ -22,13 +21,10 @@ export default function CountryContextProvider(props) {
       );
     } catch (error) {
       console.log(error);
-    } finally {
-      setLoading(false);
     }
   }
 
   useEffect(() => {
-    setLoading(true);
     getCountryInfo();
   }, []);
   return (
@@ -38,8 +34,6 @@ export default function CountryContextProvider(props) {
         countryNames,
         setCountries,
         getCountryInfo,
-        loading,
-        setLoading,
       }}
     >
       {props.children}
