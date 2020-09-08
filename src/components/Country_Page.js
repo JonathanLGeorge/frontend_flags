@@ -30,7 +30,7 @@ export default withRouter(function Country_Page({ match, location }) {
   }, [location, match.params.id, countryCode]);
   return (
     <div className="button_container">
-      <button className="button_arrow" onClick={(e) => history.push("/")}>
+      <button className="button_arrow" onClick={(e) => history.push("/home")}>
         <svg className="icon">
           <use href={`${sprites}#icon-arrow-left`}></use>
         </svg>
