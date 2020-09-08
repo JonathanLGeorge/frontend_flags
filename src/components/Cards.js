@@ -3,7 +3,11 @@ import "../App.css";
 import { Link } from "react-router-dom";
 function Cards({ info }) {
   return (
-    <Link className="card_country" to={`/country/${info.alpha3Code}`}>
+    <Link
+      className="card_country"
+      to={`/country/${info.alpha3Code}`}
+      style={{ textDecoration: "none" }}
+    >
       <div className="card_img">
         <img src={info.flag} alt={info.name} />
       </div>
