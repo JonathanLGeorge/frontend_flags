@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import GetCountryInfo from "./components/GetCountryInfo";
 import Container_Main from "./components/Container_Main";
@@ -17,11 +17,7 @@ function App() {
         <Router>
           <Switch>
             <div className="padding">
-              <Route
-                exact
-                path="jonathanlgeorge.github.io/frontend_flags/"
-                component={Container_Main}
-              />
+              <Route exact path="/home" component={Container_Main} />
               <Route exact path="/country/:id" component={Country_Page} />
             </div>
           </Switch>
