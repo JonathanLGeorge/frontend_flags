@@ -6,6 +6,11 @@ import Container_Main from "./components/Container_Main";
 function App() {
   return (
     <div className="App">
+      <header>
+        <div class="container">
+          <h1>Where in the world?</h1>
+        </div>
+      </header>
       <GetCountryInfo>
         <Router>
           <Switch>

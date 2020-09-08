@@ -7,7 +7,7 @@ function Container_Main() {
   return (
     <div className="container">
       <div>Search</div>
-      <div className="countries">
+      <div className="canvas">
         {countries.map((country) => (
           <Cards key={country.alpha3code} info={country} />
         ))}
